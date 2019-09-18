@@ -1,0 +1,95 @@
+/// Global font color.
+/// @type Color
+$global-font-color: $black !default;
+
+/// Global font family.
+/// @type Font
+$global-font-family: Helvetica, Arial, sans-serif !default;
+
+/// Global font weight.
+/// @type Keyword
+$global-font-weight: normal !default;
+
+/// Global line height.
+/// @type Number
+$global-line-height: 130% !default;
+
+/// Font size of body text.
+/// @type Number
+$global-font-size: 16px !default;
+
+/// Body background color.
+/// @type Color
+$global-body-background: $light-gray !default;
+
+/// Color for the container background
+/// @type Color
+$global-container-background: $white !default;
+
+/// Width of the container.
+/// @type Number
+$global-container-width: 580px !default;
+
+/// Width of the container on small screens.
+/// @type Length
+$global-container-width-small: 95% !default;
+
+/// Gutter for grid elements.
+/// @type length
+$global-gutter: 16px !default;
+
+/// Global padding.
+/// @type Number
+$global-padding: 16px !default;
+
+/// Global margin. Margin requires a capital 'M' to work in Outlook.com
+/// @type Number
+$global-margin: 16px !default;
+
+/// Global radius of radius-corners.
+/// @type Number
+$global-radius: 3px !default;
+
+/// Global rounded radius of rounded-corners.
+/// @type Number
+$global-rounded: 500px !default;
+
+/// Global media query to switch from desktop to mobile styles.
+/// @type String
+$global-breakpoint: $global-container-width + $global-gutter !default;
+
+@mixin base-global {
+  // For viewing email in browser
+  @media only screen {
+    html {
+      min-height: 100%;
+      background: $global-body-background;
+    }
+  }
+
+  table.body {
+    background: $global-body-background;
+    height: 100%;
+    width: 100%;
+
+    & table.spacer {
+      width: 100%;
+      td {
+        mso-line-height-rule: exactly;
+      }
+    }
+  }
+
+  @include breakpoint-small {
+    table.body {
+      & img {
+        width: auto;
+        height: auto;
+      }
+
+      & center {
+        min-width: 0 !important;
+      }
+    }
+  }
+}

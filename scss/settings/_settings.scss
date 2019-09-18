@@ -1,0 +1,128 @@
+//  Emails Settings
+//  ------------------------------
+//
+//  Table of Contents:
+//
+//   1. Global
+//   2. Grid
+//   3. Typography
+//   4. Button
+//   5. Callout
+//   6. Menu
+//   7. Thumbnail
+//   8. Normalize
+
+// 1. Global
+// ---------
+
+$black: #000;
+$light-gray: #f3f3f3;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$white: #fff;
+$blue: #2185d0;
+$red: #c62828;
+$yellow: #ffdd57;
+$green: #21ba45;
+$primary-color: $blue;
+$secondary-color: $medium-gray;
+$info-color: $blue;
+$success-color: $green;
+$warning-color: $yellow;
+$danger-color: $red;
+
+$global-font-color: $black;
+$global-font-family: Helvetica, Arial, sans-serif;
+$global-font-weight: normal;
+$global-line-height: 130%;
+$global-font-size: 16px;
+$global-body-background: $light-gray;
+$global-container-background: $white;
+$global-container-width: 580px;
+$global-container-width-small: 95%;
+$global-gutter: 16px;
+$global-padding: 16px;
+$global-margin: 16px;
+$global-radius: 3px;
+$global-rounded: 500px;
+$global-breakpoint: $global-container-width + $global-gutter;
+
+// 2. Grid
+// -------
+$grid-column-count: 12;
+$grid-column-padding-bottom: $global-padding;
+$grid-container-radius: 0;
+
+// 3. Typography
+// -------------
+$header-color: inherit !default;
+$header-font-family: $global-font-family !default;
+$header-font-weight: $global-font-weight !default;
+$h1-font-size: 34px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 28px !default;
+$h4-font-size: 24px !default;
+$h5-font-size: 20px !default;
+$h6-font-size: 18px !default;
+$header-margin-bottom: 10px !default;
+$paragraph-margin-bottom: 10px !default;
+$small-font-size: 80% !default;
+$small-font-color: $medium-gray !default;
+$anchor-color: $primary-color !default;
+$anchor-color-visited: $anchor-color !default;
+$anchor-color-hover: darken($primary-color, 10%) !default;
+$anchor-color-active: $anchor-color-hover !default;
+$anchor-text-decoration: none !default;
+
+// 4. Button
+// ---------
+$button-padding: (
+  tiny: 4px 8px 4px 8px,
+  small: 5px 10px 5px 10px,
+  default: 8px 16px 8px 16px,
+  large: 10px 20px 10px 20px,
+);
+$button-font-size: (
+  tiny: 10px,
+  small: 12px,
+  default: 16px,
+  large: 20px,
+);
+$button-color: $white;
+$button-font-weight: bold;
+$button-margin: 0 0 $global-margin 0;
+$button-background: $primary-color;
+$button-border: 2px solid $button-background;
+$button-radius: $global-radius;
+$button-rounded: $global-rounded;
+
+// 5. Callout
+// ---------
+$callout-background: $white;
+$callout-background-fade: 85%;
+$callout-padding: 10px;
+$callout-margin-bottom: $global-margin;
+$callout-border: 1px solid darken($callout-background, 20%);
+$callout-border-secondary: 1px solid darken($secondary-color, 20%);
+$callout-border-success: 1px solid darken($success-color, 20%);
+$callout-border-warning: 1px solid darken($warning-color, 20%);
+$callout-border-danger: 1px solid darken($danger-color, 20%);
+
+// 6. Menu
+// ------------
+$menu-item-padding: 10px;
+$menu-item-gutter: 10px;
+$menu-item-color: $primary-color;
+
+// 7. Thumbnail
+// ------------
+$thumbnail-border: solid 4px $white;
+$thumbnail-margin-bottom: $global-margin;
+$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-transition: box-shadow 200ms ease-out;
+$thumbnail-radius: $global-radius;
+
+// 8. Normalize
+// ------------
+$normalize-remove-ios-blue: true;

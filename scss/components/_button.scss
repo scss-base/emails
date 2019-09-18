@@ -1,0 +1,323 @@
+/// Padding inside buttons at various sizes.
+/// @type Map
+$button-padding: (
+  tiny: 4px 8px 4px 8px,
+  small: 5px 10px 5px 10px,
+  default: 8px 16px 8px 16px,
+  large: 10px 20px 10px 20px,
+) !default;
+
+/// Font sizes of buttons at various sizes.
+/// @type Map
+$button-font-size: (
+  tiny: 10px,
+  small: 12px,
+  default: 16px,
+  large: 20px,
+) !default;
+
+/// Text color of buttons.
+/// @type Color
+$button-color: $white !default;
+
+/// Font weight of buttons.
+/// @type Weight
+$button-font-weight: bold !default;
+
+/// Margin around buttons.
+/// @type List
+$button-margin: 0 0 $global-margin 0 !default;
+
+/// Background color of buttons.
+/// @type Color
+$button-background: $primary-color !default;
+
+/// Border around buttons.
+/// @type Border
+$button-border: 2px solid $button-background !default;
+
+/// Border radius of buttons. Not supported by all email clients.
+/// @type Number
+$button-radius: $global-radius !default;
+
+/// Border radius of rounded buttons. Not supported by all email clients.
+/// @type Number
+$button-rounded: $global-rounded !default;
+
+@mixin base-button {
+  table.body table.button {
+    width: auto;
+    margin: $button-margin;
+    Margin: $button-margin;
+
+    table {
+      td {
+        text-align: left;
+        color: $button-color;
+        background: $button-background;
+        border: $button-border;
+
+        a {
+          font-family: $global-font-family;
+          font-size: map-get($button-font-size, default);
+          font-weight: $button-font-weight;
+          color: $button-color;
+          text-decoration: none;
+          text-align: left;
+          display: inline-block;
+          padding: map-get($button-padding, default);
+          border: 0 solid $button-background;
+          border-radius: $button-radius;
+        }
+      }
+    }
+
+    &.radius table td {
+      border-radius: $button-radius;
+      border: none;
+    }
+
+    &.rounded table td {
+      border-radius: $button-rounded;
+      border: none;
+    }
+
+    &:hover table tr td a,
+    &:active table tr td a,
+    & table tr td a:visited,
+    &.tiny:hover table tr td a,
+    &.tiny:active table tr td a,
+    &.tiny table tr td a:visited,
+    &.small:hover table tr td a,
+    &.small:active table tr td a,
+    &.small table tr td a:visited,
+    &.large:hover table tr td a,
+    &.large:active table tr td a,
+    &.large table tr td a:visited {
+      color: $button-color;
+    }
+
+    &.tiny {
+      table {
+        td,
+        a {
+          padding: map-get($button-padding, tiny);
+        }
+
+        a {
+          font-size: map-get($button-font-size, tiny);
+          font-weight: normal;
+        }
+      }
+    }
+
+    &.small {
+      table {
+        td,
+        a {
+          padding: map-get($button-padding, small);
+          font-size: map-get($button-font-size, small);
+        }
+      }
+    }
+
+    &.large {
+      table {
+        a {
+          padding: map-get($button-padding, large);
+          font-size: map-get($button-font-size, large);
+        }
+      }
+    }
+
+    &.expand,
+    &.expanded {
+      width: 100%;
+
+      table {
+        width: 100%;
+
+        a {
+          text-align: center;
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      center {
+        min-width: 0;
+      }
+    }
+
+    &:hover,
+    &:visited,
+    &:active {
+      table {
+        td {
+          background: darken($button-background, 10%);
+          color: $button-color;
+        }
+      }
+    }
+
+    &:hover,
+    &:visited,
+    &:active {
+      table {
+        a {
+          border: 0 solid darken($button-background, 10%);
+        }
+      }
+    }
+
+    &.secondary {
+      table {
+        td {
+          background: $secondary-color;
+          color: $button-color;
+          border: 0px solid $secondary-color;
+        }
+
+        a {
+          color: $button-color;
+          border: 0 solid $secondary-color;
+        }
+      }
+    }
+
+    &.secondary:hover {
+      table {
+        td {
+          background: lighten($secondary-color, 10%);
+          color: $button-color;
+        }
+
+        a {
+          border: 0 solid lighten($secondary-color, 10%);
+        }
+      }
+    }
+
+    &.secondary:hover {
+      table {
+        td a {
+          color: $button-color;
+        }
+      }
+    }
+
+    &.secondary:active {
+      table {
+        td a {
+          color: $button-color;
+        }
+      }
+    }
+
+    &.secondary {
+      table {
+        td a:visited {
+          color: $button-color;
+        }
+      }
+    }
+
+    &.success {
+      table {
+        td {
+          background: $success-color;
+          border: 0px solid $success-color;
+        }
+
+        a {
+          border: 0 solid $success-color;
+        }
+      }
+    }
+
+    &.success:hover {
+      table {
+        td {
+          background: darken($success-color, 10%);
+        }
+
+        a {
+          border: 0 solid darken($success-color, 10%);
+        }
+      }
+    }
+
+    &.danger {
+      table {
+        td {
+          background: $danger-color;
+          border: 0px solid $danger-color;
+        }
+
+        a {
+          border: 0 solid $danger-color;
+        }
+      }
+    }
+
+    &.danger:hover {
+      table {
+        td {
+          background: darken($danger-color, 10%);
+        }
+
+        a {
+          border: 0 solid darken($danger-color, 10%);
+        }
+      }
+    }
+
+    &.warning {
+      table {
+        td {
+          background: $warning-color;
+          border: 0 solid $warning-color;
+        }
+
+        a {
+          border: 0 solid $warning-color;
+        }
+      }
+    }
+
+    &.warning:hover {
+      table {
+        td {
+          background: darken($warning-color, 10%);
+        }
+
+        a {
+          border: 0 solid darken($warning-color, 10%);
+        }
+      }
+    }
+
+    @include breakpoint-small {
+      // Expands buttons for small only
+      &.small-expanded {
+        width: 100% !important;
+
+        table {
+          width: 100%;
+
+          a {
+            text-align: center !important;
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+
+        center {
+          min-width: 0;
+        }
+      }
+    }
+  }
+}

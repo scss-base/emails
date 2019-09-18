@@ -1,0 +1,59 @@
+/// Color used for black ui items.
+/// @type Color
+$black: #000 !default;
+
+// Color used for light gray UI items.
+/// @type Color
+$light-gray: #f3f3f3 !default;
+
+/// Color used for medium gray UI items.
+/// @type Color
+$medium-gray: #cacaca !default;
+
+/// Color used for dark gray UI items.
+/// @type Color
+$dark-gray: #8a8a8a !default;
+
+/// Color used for white ui items.
+/// @type Color
+$white: #fff !default;
+
+/// Color used for blue ui items.
+/// @type Color
+$blue: #2185d0 !default;
+
+/// Color used for red ui items.
+/// @type Color
+$red: #c62828 !default;
+
+/// Color used for red ui items.
+/// @type Color
+$yellow: #ffdd57 !default;
+
+/// Color used for green ui items.
+/// @type Color
+$green: #21ba45 !default;
+
+/// Primary color for interactive components like links and buttons.
+/// @type Color
+$primary-color: $blue !default;
+
+/// Secondary color, used with components that support the `.secondary` class.
+/// @type Color
+$secondary-color: $medium-gray !default;
+
+/// Color used for info ui items.
+/// @type Color
+$info-color: $blue !default;
+
+/// Color to indicate a positive status or action, used with the `.success` class.
+/// @type Color
+$success-color: $green !default;
+
+/// Color to indicate a caution status or action, used with the `.warning` class.
+/// @type Color
+$warning-color: $yellow !default;
+
+/// Color to indicate a negative status or action, used with the `.alert` class.
+/// @type Color
+$danger-color: $red !default;

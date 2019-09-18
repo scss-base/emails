@@ -1,0 +1,157 @@
+/// Default number of columns for an email.
+/// @type Number
+$grid-column-count: 12 !default;
+
+/// Default padding for the bottom of a column.
+/// @type Number
+$grid-column-padding-bottom: $global-padding !default;
+
+/// Default border radius for the container. Use a px value
+/// @type Number
+$grid-container-radius: 0 !default;
+
+@mixin grid-container {
+  background: $global-container-background;
+  display: table;
+  width: $global-container-width;
+  margin: 0 auto;
+  Margin: 0 auto;
+  text-align: inherit;
+
+  @include breakpoint-small {
+    width: $global-container-width-small !important;
+  }
+
+  // Adds radius to container
+  &.radius {
+    border-radius: $grid-container-radius;
+    border-collapse: separate;
+  }
+}
+
+@mixin grid-row {
+  display: table;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+@mixin grid-column {
+  margin: 0 auto;
+  Margin: 0 auto;
+  padding-left: $global-gutter / 2;
+  padding-right: $global-gutter / 2;
+  padding-bottom: $grid-column-padding-bottom;
+
+  &.first {
+    padding-left: $global-gutter;
+  }
+
+  &.last {
+    padding-right: $global-gutter;
+  }
+
+  // Makes sure nested tables are 100% width
+  table {
+    width: 100%;
+
+    &.button {
+      width: auto;
+
+      &.expanded {
+        width: 100%;
+      }
+    }
+  }
+
+  // Prevents Nested columns from double the padding
+  .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    center {
+      min-width: unset !important;
+    }
+  }
+
+  @include breakpoint-small {
+    height: auto !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: $global-gutter !important;
+    padding-right: $global-gutter !important;
+
+    // Nested columns won't double the padding
+    .column {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+@mixin grid-expander {
+  visibility: hidden;
+  width: 0;
+  padding: 0 !important;
+
+  @include breakpoint-small {
+    display: none !important;
+  }
+}
+
+@mixin base-grid {
+  table.body {
+
+    table.container {
+      @include grid-container;
+    }
+
+    table.row {
+      @include grid-row;
+
+      td.column,
+      th.column {
+        @include grid-column;
+      }
+
+      td.expander,
+      th.expander {
+        @include grid-expander;
+      }
+
+      @for $i from 1 through $grid-column-count {
+        td.large-#{$i},
+        th.large-#{$i} {
+          width: grid-calc-px($i, $grid-column-count, $global-container-width);
+        }
+      }
+
+      // Collapsed logic
+      &.collapse {
+        > tbody > tr > td,
+        > tbody > tr > th {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+
+        @for $i from 1 through $grid-column-count {
+          > tbody > tr > td.large-#{$i},
+          > tbody > tr > th.large-#{$i} {
+            width: grid-calc-px($i, $grid-column-count, $global-container-width) + $global-gutter;
+          }
+        }
+      }
+
+      @include breakpoint-small {
+        @for $i from 1 through $grid-column-count {
+          td.small-#{$i},
+          th.small-#{$i} {
+            display: inline-block !important;
+            width: grid-calc-pct($i, $grid-column-count) !important;
+          }
+        }
+      }
+    }
+  }
+}

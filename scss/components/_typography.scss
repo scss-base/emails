@@ -1,0 +1,175 @@
+/// Header color
+/// @type Color
+$header-color: inherit !default;
+
+/// Font family of headings.
+/// @type List
+$header-font-family: $global-font-family !default;
+
+/// Font family of headings.
+/// @type List
+$header-font-weight: $global-font-weight !default;
+
+/// Font size of `<h1>` elements.
+/// @type Number
+$h1-font-size: 34px !default;
+
+/// Font size of `<h2>` elements.
+/// @type Number
+$h2-font-size: 30px !default;
+
+/// Font size of `<h3>` elements.
+/// @type Number
+$h3-font-size: 28px !default;
+
+/// Font size of `<h4>` elements.
+/// @type Number
+$h4-font-size: 24px !default;
+
+/// Font size of `<h5>` elements.
+/// @type Number
+$h5-font-size: 20px !default;
+
+/// Font size of `<h6>` elements.
+/// @type Number
+$h6-font-size: 18px !default;
+
+/// Margin bottom of `<h1>` through `<h6>` elements.
+/// @type Number
+$header-margin-bottom: 10px !default;
+
+/// Margin bottom of paragraphs.
+/// @type Number
+$paragraph-margin-bottom: 10px !default;
+
+/// Default font size for `<small>`.
+/// @type Number
+$small-font-size: 80% !default;
+
+/// Color of `<small>` elements when placed inside headers.
+/// @type Color
+$small-font-color: $medium-gray !default;
+
+/// Text color of anchors.
+/// @type Color
+$anchor-color: $primary-color !default;
+
+/// Text color of anchors to visited links.
+/// @type Color
+$anchor-color-visited: $anchor-color !default;
+
+/// Text color of anchors on hover.
+/// @type Color
+$anchor-color-hover: darken($primary-color, 10%) !default;
+
+/// Text color of active anchors.
+/// @type Color
+$anchor-color-active: $anchor-color-hover !default;
+
+/// Text decoration for anchors.
+/// @type Keyword
+$anchor-text-decoration: none !default;
+
+@mixin base-typography {
+  body,
+  table.body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  td,
+  th {
+    color: $global-font-color;
+    font-family: $global-font-family;
+    font-weight: $global-font-weight;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin: 0;
+    Margin: 0;
+    text-align: left;
+    line-height: $global-line-height;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $header-color;
+    word-wrap: normal;
+    font-family: $header-font-family;
+    font-weight: $header-font-weight;
+    margin-bottom: $header-margin-bottom;
+    Margin-bottom: $header-margin-bottom;
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+  }
+
+  h2 {
+    font-size: $h2-font-size;
+  }
+
+  h3 {
+    font-size: $h3-font-size;
+  }
+
+  h4 {
+    font-size: $h4-font-size;
+  }
+
+  h5 {
+    font-size: $h5-font-size;
+  }
+
+  h6 {
+    font-size: $h6-font-size;
+  }
+
+  body,
+  table.body,
+  p,
+  td,
+  th {
+    font-size: $global-font-size;
+  }
+
+  p {
+    margin-bottom: $paragraph-margin-bottom;
+    Margin-bottom: $paragraph-margin-bottom;
+  }
+
+  small {
+    font-size: $small-font-size;
+    color: $small-font-color;
+  }
+
+  a {
+    color: $anchor-color;
+    text-decoration: $anchor-text-decoration;
+    font-family: $global-font-family;
+    font-weight: $global-font-weight;
+    padding: 0;
+    text-align: left;
+    line-height: $global-line-height;
+
+    &:hover {
+      color: $anchor-color-hover;
+    }
+
+    &:active {
+      color: $anchor-color-active;
+    }
+
+    &:visited {
+      color: $anchor-color-visited;
+    }
+  }
+}

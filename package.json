@@ -1,0 +1,26 @@
+{
+  "name": "scss-base-emails",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/emails.scss dist/emails.css",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/emails.min.css dist/emails.css",
+    "watch-css": "nodemon --watch scss/ --ext scss --exec 'npm run css-compile'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scss-base/emails.git"
+  },
+  "author": "K. Media GbR <hello@kmedia.email> (http://kmedia.rocks)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scss-base/emails/issues"
+  },
+  "homepage": "https://github.com/scss-base/emails#readme",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.2"
+  }
+}

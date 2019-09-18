@@ -1,0 +1,50 @@
+@mixin base-visibility {
+  table.body table.container {
+    .hide-for-large {
+      display: none;
+      mso-hide: all; // hide selected elements in Outlook 2007-2013
+      overflow: hidden;
+      max-height: 0;
+      font-size: 0;
+      width: 0;
+      line-height: 0;
+
+      @include breakpoint-small {
+        display: block !important;
+        width: auto !important;
+        overflow: visible !important;
+        max-height: none !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      * {
+        mso-hide: all; // hide selected elements in Outlook 2007-2013
+      }
+    }
+
+    .show-for-large {
+      @include breakpoint-small {
+        display: none !important;
+        width: 0;
+        mso-hide: all; // hide selected elements in Outlook 2007-2013
+        overflow: hidden;
+      }
+    }
+
+    .hide-for-large,
+    .row.hide-for-large {
+      @include breakpoint-small {
+        display: table !important;
+        width: 100% !important;
+      }
+    }
+
+    .callout-inner.hide-for-large {
+      @include breakpoint-small {
+        display: table-cell !important;
+        width: 100% !important;
+      }
+    }
+  }
+}

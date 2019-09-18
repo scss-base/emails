@@ -1,0 +1,985 @@
+/*! scss-base for emails | github.com/scss-base/emails */
+#outlook a {
+  padding: 0;
+}
+
+body {
+  width: 100% !important;
+  min-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  Margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body.outlook p {
+  display: inline !important;
+}
+
+.ExternalClass {
+  width: 100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+
+#backgroundTable {
+  margin: 0;
+  Margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important;
+}
+
+img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  width: auto;
+  max-width: 100%;
+  clear: both;
+  display: block;
+}
+
+center {
+  width: 100%;
+  min-width: 580px;
+}
+
+a img {
+  border: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important;
+}
+
+table, tr, td {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+@media only screen {
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+}
+
+@media only screen {
+  html {
+    min-height: 100%;
+    background: #f3f3f3;
+  }
+}
+
+table.body {
+  background: #f3f3f3;
+  height: 100%;
+  width: 100%;
+}
+
+table.body table.spacer {
+  width: 100%;
+}
+
+table.body table.spacer td {
+  mso-line-height-rule: exactly;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body img {
+    width: auto;
+    height: auto;
+  }
+  table.body center {
+    min-width: 0 !important;
+  }
+}
+
+table.body table.container {
+  background: #fff;
+  display: table;
+  width: 580px;
+  margin: 0 auto;
+  Margin: 0 auto;
+  text-align: inherit;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.container {
+    width: 95% !important;
+  }
+}
+
+table.body table.container.radius {
+  border-radius: 0;
+  border-collapse: separate;
+}
+
+table.body table.row {
+  display: table;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+table.body table.row td.column,
+table.body table.row th.column {
+  margin: 0 auto;
+  Margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+}
+
+table.body table.row td.column.first,
+table.body table.row th.column.first {
+  padding-left: 16px;
+}
+
+table.body table.row td.column.last,
+table.body table.row th.column.last {
+  padding-right: 16px;
+}
+
+table.body table.row td.column table,
+table.body table.row th.column table {
+  width: 100%;
+}
+
+table.body table.row td.column table.button,
+table.body table.row th.column table.button {
+  width: auto;
+}
+
+table.body table.row td.column table.button.expanded,
+table.body table.row th.column table.button.expanded {
+  width: 100%;
+}
+
+table.body table.row td.column .column,
+table.body table.row th.column .column {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+table.body table.row td.column .column center,
+table.body table.row th.column .column center {
+  min-width: unset !important;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.row td.column,
+  table.body table.row th.column {
+    height: auto !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  table.body table.row td.column .column,
+  table.body table.row th.column .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+table.body table.row td.expander,
+table.body table.row th.expander {
+  visibility: hidden;
+  width: 0;
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.row td.expander,
+  table.body table.row th.expander {
+    display: none !important;
+  }
+}
+
+table.body table.row td.large-1,
+table.body table.row th.large-1 {
+  width: 32.333333px;
+}
+
+table.body table.row td.large-2,
+table.body table.row th.large-2 {
+  width: 80.666667px;
+}
+
+table.body table.row td.large-3,
+table.body table.row th.large-3 {
+  width: 129px;
+}
+
+table.body table.row td.large-4,
+table.body table.row th.large-4 {
+  width: 177.333333px;
+}
+
+table.body table.row td.large-5,
+table.body table.row th.large-5 {
+  width: 225.666667px;
+}
+
+table.body table.row td.large-6,
+table.body table.row th.large-6 {
+  width: 274px;
+}
+
+table.body table.row td.large-7,
+table.body table.row th.large-7 {
+  width: 322.333333px;
+}
+
+table.body table.row td.large-8,
+table.body table.row th.large-8 {
+  width: 370.666667px;
+}
+
+table.body table.row td.large-9,
+table.body table.row th.large-9 {
+  width: 419px;
+}
+
+table.body table.row td.large-10,
+table.body table.row th.large-10 {
+  width: 467.333333px;
+}
+
+table.body table.row td.large-11,
+table.body table.row th.large-11 {
+  width: 515.666667px;
+}
+
+table.body table.row td.large-12,
+table.body table.row th.large-12 {
+  width: 564px;
+}
+
+table.body table.row.collapse > tbody > tr > td,
+table.body table.row.collapse > tbody > tr > th {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-1,
+table.body table.row.collapse > tbody > tr > th.large-1 {
+  width: 48.333333px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-2,
+table.body table.row.collapse > tbody > tr > th.large-2 {
+  width: 96.666667px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-3,
+table.body table.row.collapse > tbody > tr > th.large-3 {
+  width: 145px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-4,
+table.body table.row.collapse > tbody > tr > th.large-4 {
+  width: 193.333333px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-5,
+table.body table.row.collapse > tbody > tr > th.large-5 {
+  width: 241.666667px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-6,
+table.body table.row.collapse > tbody > tr > th.large-6 {
+  width: 290px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-7,
+table.body table.row.collapse > tbody > tr > th.large-7 {
+  width: 338.333333px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-8,
+table.body table.row.collapse > tbody > tr > th.large-8 {
+  width: 386.666667px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-9,
+table.body table.row.collapse > tbody > tr > th.large-9 {
+  width: 435px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-10,
+table.body table.row.collapse > tbody > tr > th.large-10 {
+  width: 483.333333px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-11,
+table.body table.row.collapse > tbody > tr > th.large-11 {
+  width: 531.666667px;
+}
+
+table.body table.row.collapse > tbody > tr > td.large-12,
+table.body table.row.collapse > tbody > tr > th.large-12 {
+  width: 580px;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.row td.small-1,
+  table.body table.row th.small-1 {
+    display: inline-block !important;
+    width: 8.333333% !important;
+  }
+  table.body table.row td.small-2,
+  table.body table.row th.small-2 {
+    display: inline-block !important;
+    width: 16.666666% !important;
+  }
+  table.body table.row td.small-3,
+  table.body table.row th.small-3 {
+    display: inline-block !important;
+    width: 25% !important;
+  }
+  table.body table.row td.small-4,
+  table.body table.row th.small-4 {
+    display: inline-block !important;
+    width: 33.333333% !important;
+  }
+  table.body table.row td.small-5,
+  table.body table.row th.small-5 {
+    display: inline-block !important;
+    width: 41.666666% !important;
+  }
+  table.body table.row td.small-6,
+  table.body table.row th.small-6 {
+    display: inline-block !important;
+    width: 50% !important;
+  }
+  table.body table.row td.small-7,
+  table.body table.row th.small-7 {
+    display: inline-block !important;
+    width: 58.333333% !important;
+  }
+  table.body table.row td.small-8,
+  table.body table.row th.small-8 {
+    display: inline-block !important;
+    width: 66.666666% !important;
+  }
+  table.body table.row td.small-9,
+  table.body table.row th.small-9 {
+    display: inline-block !important;
+    width: 75% !important;
+  }
+  table.body table.row td.small-10,
+  table.body table.row th.small-10 {
+    display: inline-block !important;
+    width: 83.333333% !important;
+  }
+  table.body table.row td.small-11,
+  table.body table.row th.small-11 {
+    display: inline-block !important;
+    width: 91.666666% !important;
+  }
+  table.body table.row td.small-12,
+  table.body table.row th.small-12 {
+    display: inline-block !important;
+    width: 100% !important;
+  }
+}
+
+body,
+table.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th {
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin: 0;
+  Margin: 0;
+  text-align: left;
+  line-height: 130%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  word-wrap: normal;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  Margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+body,
+table.body,
+p,
+td,
+th {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 10px;
+  Margin-bottom: 10px;
+}
+
+small {
+  font-size: 80%;
+  color: #cacaca;
+}
+
+a {
+  color: #2185d0;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  padding: 0;
+  text-align: left;
+  line-height: 130%;
+}
+
+a:hover {
+  color: #1a69a4;
+}
+
+a:active {
+  color: #1a69a4;
+}
+
+a:visited {
+  color: #2185d0;
+}
+
+table.body table.button {
+  width: auto;
+  margin: 0 0 16px 0;
+  Margin: 0 0 16px 0;
+}
+
+table.body table.button table td {
+  text-align: left;
+  color: #fff;
+  background: #2185d0;
+  border: 2px solid #2185d0;
+}
+
+table.body table.button table td a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  display: inline-block;
+  padding: 8px 16px 8px 16px;
+  border: 0 solid #2185d0;
+  border-radius: 3px;
+}
+
+table.body table.button.radius table td {
+  border-radius: 3px;
+  border: none;
+}
+
+table.body table.button.rounded table td {
+  border-radius: 500px;
+  border: none;
+}
+
+table.body table.button:hover table tr td a,
+table.body table.button:active table tr td a,
+table.body table.button table tr td a:visited,
+table.body table.button.tiny:hover table tr td a,
+table.body table.button.tiny:active table tr td a,
+table.body table.button.tiny table tr td a:visited,
+table.body table.button.small:hover table tr td a,
+table.body table.button.small:active table tr td a,
+table.body table.button.small table tr td a:visited,
+table.body table.button.large:hover table tr td a,
+table.body table.button.large:active table tr td a,
+table.body table.button.large table tr td a:visited {
+  color: #fff;
+}
+
+table.body table.button.tiny table td,
+table.body table.button.tiny table a {
+  padding: 4px 8px 4px 8px;
+}
+
+table.body table.button.tiny table a {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+table.body table.button.small table td,
+table.body table.button.small table a {
+  padding: 5px 10px 5px 10px;
+  font-size: 12px;
+}
+
+table.body table.button.large table a {
+  padding: 10px 20px 10px 20px;
+  font-size: 20px;
+}
+
+table.body table.button.expand, table.body table.button.expanded {
+  width: 100%;
+}
+
+table.body table.button.expand table, table.body table.button.expanded table {
+  width: 100%;
+}
+
+table.body table.button.expand table a, table.body table.button.expanded table a {
+  text-align: center;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+table.body table.button.expand center, table.body table.button.expanded center {
+  min-width: 0;
+}
+
+table.body table.button:hover table td, table.body table.button:visited table td, table.body table.button:active table td {
+  background: #1a69a4;
+  color: #fff;
+}
+
+table.body table.button:hover table a, table.body table.button:visited table a, table.body table.button:active table a {
+  border: 0 solid #1a69a4;
+}
+
+table.body table.button.secondary table td {
+  background: #cacaca;
+  color: #fff;
+  border: 0px solid #cacaca;
+}
+
+table.body table.button.secondary table a {
+  color: #fff;
+  border: 0 solid #cacaca;
+}
+
+table.body table.button.secondary:hover table td {
+  background: #e4e4e4;
+  color: #fff;
+}
+
+table.body table.button.secondary:hover table a {
+  border: 0 solid #e4e4e4;
+}
+
+table.body table.button.secondary:hover table td a {
+  color: #fff;
+}
+
+table.body table.button.secondary:active table td a {
+  color: #fff;
+}
+
+table.body table.button.secondary table td a:visited {
+  color: #fff;
+}
+
+table.body table.button.success table td {
+  background: #21ba45;
+  border: 0px solid #21ba45;
+}
+
+table.body table.button.success table a {
+  border: 0 solid #21ba45;
+}
+
+table.body table.button.success:hover table td {
+  background: #198f35;
+}
+
+table.body table.button.success:hover table a {
+  border: 0 solid #198f35;
+}
+
+table.body table.button.danger table td {
+  background: #c62828;
+  border: 0px solid #c62828;
+}
+
+table.body table.button.danger table a {
+  border: 0 solid #c62828;
+}
+
+table.body table.button.danger:hover table td {
+  background: #9c1f1f;
+}
+
+table.body table.button.danger:hover table a {
+  border: 0 solid #9c1f1f;
+}
+
+table.body table.button.warning table td {
+  background: #ffdd57;
+  border: 0 solid #ffdd57;
+}
+
+table.body table.button.warning table a {
+  border: 0 solid #ffdd57;
+}
+
+table.body table.button.warning:hover table td {
+  background: #ffd324;
+}
+
+table.body table.button.warning:hover table a {
+  border: 0 solid #ffd324;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.button.small-expanded {
+    width: 100% !important;
+  }
+  table.body table.button.small-expanded table {
+    width: 100%;
+  }
+  table.body table.button.small-expanded table a {
+    text-align: center !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  table.body table.button.small-expanded center {
+    min-width: 0;
+  }
+}
+
+table.body table.callout {
+  margin-bottom: 16px;
+  Margin-bottom: 16px;
+}
+
+table.body table.callout th.callout-inner {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  background: #fff;
+}
+
+table.body table.callout th.callout-inner.primary {
+  background: #dcedf9;
+  border: 1px solid #979797;
+  color: #000;
+}
+
+table.body table.callout th.callout-inner.secondary {
+  background: #f7f7f7;
+  border: 1px solid #979797;
+  color: #000;
+}
+
+table.body table.callout th.callout-inner.success {
+  background: #daf8e1;
+  border: 1px solid #126325;
+  color: #fff;
+}
+
+table.body table.callout th.callout-inner.warning {
+  background: #fffae6;
+  border: 1px solid #f0bf00;
+  color: #fff;
+}
+
+table.body table.callout th.callout-inner.danger {
+  background: #f8dddd;
+  border: 1px solid #711717;
+  color: #fff;
+}
+
+table.body table.menu {
+  width: 580px;
+}
+
+table.body table.menu td.menu-item,
+table.body table.menu th.menu-item {
+  padding: 10px;
+  padding-right: 10px;
+}
+
+table.body table.menu td.menu-item a,
+table.body table.menu th.menu-item a {
+  color: #2185d0;
+}
+
+table.body table.menu.vertical td.menu-item,
+table.body table.menu.vertical th.menu-item {
+  padding: 10px;
+  padding-right: 0;
+  display: block;
+}
+
+table.body table.menu.vertical td.menu-item a,
+table.body table.menu.vertical th.menu-item a {
+  width: 100%;
+}
+
+table.body table.menu.vertical td.menu-item table.menu.vertical td.menu-item,
+table.body table.menu.vertical td.menu-item table.menu.vertical th.menu-item,
+table.body table.menu.vertical th.menu-item table.menu.vertical td.menu-item,
+table.body table.menu.vertical th.menu-item table.menu.vertical th.menu-item {
+  padding-left: 10px;
+}
+
+table.body table.menu.text-center a {
+  text-align: center;
+}
+
+table.body table.menu[align="center"] {
+  width: auto !important;
+}
+
+table.body table.menu:not(.float-center) .menu-item:first-child {
+  padding-left: 0 !important;
+}
+
+table.body table.menu:not(.float-center) .menu-item:last-child {
+  padding-right: 0 !important;
+}
+
+table.body table.menu.vertical .menu-item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.menu.small-vertical .menu-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+table.body a.thumbnail,
+table.body img.thumbnail {
+  border: solid 4px #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  line-height: 0;
+  max-width: 100%;
+  transition: box-shadow 200ms ease-out;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+table.body a.thumbnail:hover, table.body a.thumbnail:focus,
+table.body img.thumbnail:hover,
+table.body img.thumbnail:focus {
+  box-shadow: 0 0 6px 1px rgba(33, 133, 208, 0.5);
+}
+
+table.text-center,
+th.text-center,
+td.text-center,
+h1.text-center,
+h2.text-center,
+h3.text-center,
+h4.text-center,
+h5.text-center,
+h6.text-center,
+p.text-center,
+span.text-center {
+  text-align: center;
+}
+
+table.text-left,
+th.text-left,
+td.text-left,
+h1.text-left,
+h2.text-left,
+h3.text-left,
+h4.text-left,
+h5.text-left,
+h6.text-left,
+p.text-left,
+span.text-left {
+  text-align: left;
+}
+
+table.text-right,
+th.text-right,
+td.text-right,
+h1.text-right,
+h2.text-right,
+h3.text-right,
+h4.text-right,
+h5.text-right,
+h6.text-right,
+p.text-right,
+span.text-right {
+  text-align: right;
+}
+
+span.text-center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 596px) {
+  .small-float-center {
+    margin: 0 auto !important;
+    float: none !important;
+    text-align: center !important;
+  }
+  .small-text-center {
+    text-align: center !important;
+  }
+  .small-text-left {
+    text-align: left !important;
+  }
+  .small-text-right {
+    text-align: right !important;
+  }
+}
+
+img.float-left {
+  float: left;
+  text-align: left;
+}
+
+img.float-right {
+  float: right;
+  text-align: right;
+}
+
+img.float-center,
+img.text-center {
+  margin: 0 auto;
+  Margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+table.float-center,
+td.float-center,
+th.float-center {
+  margin: 0 auto;
+  Margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+table.body table.container .hide-for-large {
+  display: none;
+  mso-hide: all;
+  overflow: hidden;
+  max-height: 0;
+  font-size: 0;
+  width: 0;
+  line-height: 0;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.container .hide-for-large {
+    display: block !important;
+    width: auto !important;
+    overflow: visible !important;
+    max-height: none !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+}
+
+table.body table.container .hide-for-large * {
+  mso-hide: all;
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.container .show-for-large {
+    display: none !important;
+    width: 0;
+    mso-hide: all;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.container .hide-for-large,
+  table.body table.container .row.hide-for-large {
+    display: table !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 596px) {
+  table.body table.container .callout-inner.hide-for-large {
+    display: table-cell !important;
+    width: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=emails.css.map */
