@@ -71,12 +71,12 @@ $global-breakpoint: $global-container-width + $global-gutter !default;
     background: $global-body-background;
     height: 100%;
     width: 100%;
+  }
 
-    & table.spacer {
-      width: 100%;
-      td {
-        mso-line-height-rule: exactly;
-      }
+  table.spacer {
+    width: 100%;
+    td {
+      mso-line-height-rule: exactly;
     }
   }
 

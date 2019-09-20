@@ -106,11 +106,11 @@ table.body {
   width: 100%;
 }
 
-table.body table.spacer {
+table.spacer {
   width: 100%;
 }
 
-table.body table.spacer td {
+table.spacer td {
   mso-line-height-rule: exactly;
 }
 
