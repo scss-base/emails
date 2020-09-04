@@ -20,7 +20,7 @@
   "homepage": "https://github.com/scss-base/emails#readme",
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.2"
   }
 }
